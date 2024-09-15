@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). The particular template configuration was created with:
+
+```bash
+npx create-next-app ticket-system --app --src-dir --use-pnpm --eslint --ts
+✔ Would you like to use Tailwind CSS? … No / Yes # Yes
+✔ Would you like to customize the default import alias (@/*)? … No / Yes # No
+```
+
+Upon completion add the supabase CLI as a Dev Dependency:
+
+```bash
+cd ticket-system
+pnpm add -D supabase
+```
+
+Then we initiated a local supabase instance:
+
+```bash
+npx supabase init
+Generate VS Code settings for Deno? [y/N] y
+Generated VS Code settings in .vscode/settings.json. Please install the recommended extension!
+Finished supabase init.
+```
 
 ## Getting Started
 
