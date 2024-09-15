@@ -22,6 +22,15 @@ Generated VS Code settings in .vscode/settings.json. Please install the recommen
 Finished supabase init.
 ```
 
+## Starting a local Supabase Instance
+
+Initiate the local docker network of supabase services from the newly created `supabase` directory within the project root:
+
+```bash
+cd supabase
+npx supabase start
+```
+
 ## Getting Started
 
 First, run the development server:
