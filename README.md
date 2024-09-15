@@ -31,6 +31,15 @@ cd supabase
 npx supabase start
 ```
 
+## Post-Template Packages
+
+The supabase js client library and complementary packages are added:
+
+```bash
+cd ..
+pnpm install @supabase/supabase-js @supabase/ssr
+```
+
 ## Getting Started
 
 First, run the development server:
