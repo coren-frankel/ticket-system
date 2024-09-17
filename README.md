@@ -46,6 +46,25 @@ cd ..
 pnpm install @supabase/supabase-js @supabase/ssr
 ```
 
+## Generating Types for TypeScript
+
+You only need to run the following command in
+your project folder (this is where we ran npx supabase init previously):
+```bash
+npx supabase gen types --local --schema public > supabase.ts
+```
+
+If you want types for a project based on supabase.com, follow these steps to get a supabase.ts file:
+> I. Go to [https://supabase.com/dashboard/account/tokens](https://supabase.com/dashboard/account/tokens) and create
+an access token.
+II. Run npx supabase login. You’ll be asked for the access token you just generated.
+After pressing Enter, it will tell you that the login process has succeeded.
+III. Now, open your project via supabase.com; you’ll see a link in your browser that
+looks like `https://supabase.com/dashboard/project/YOUR_PROJECT_
+ID/...`. You’ll also find the same project ID as part of your API URL in the Settings |
+API section. Copy this project ID.
+IV. Generate your custom supabase.ts file by running `npx supabase gen types --schema public --project-id YOUR_PROJECT_ID > supabase.ts`
+
 ## Getting Started
 
 First, run the development server:
