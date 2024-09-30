@@ -1,13 +1,25 @@
 import Link from "next/link";
-export const Login = ({ isPasswordLogin }) => {
+import { useRef } from "react";
+
+export const Login = ({ isPasswordLogin }: { isPasswordLogin: boolean }) => {
+  const emailInputRef = useRef(null);
+  const passwordInputRef = useRef(null);
   return (
-    <form>
+    <form onSubmit={(event) => {
+      event.preventDefault();
+      if (isPasswordLogin) {
+        alert("User wants to login with password");
+      } else {
+        alert("User wants to login with magic link");
+      }
+    }}>
       <article style={{ maxWidth: "480px", margin: "auto" }}>
         <header>Login</header>
         <fieldset>
           <label htmlFor="email">
             Email
             <input
+              ref={emailInputRef}
               type="email"
               id="email"
               name="email"
@@ -17,6 +29,7 @@ export const Login = ({ isPasswordLogin }) => {
             <label htmlFor="password">
               Password
               <input
+                ref={passwordInputRef}
                 type="password"
                 id="password"
                 name="password"
