@@ -22,7 +22,7 @@ Generated VS Code settings in .vscode/settings.json. Please install the recommen
 Finished supabase init.
 ```
 
-## Starting (or Restarting) a local Supabase Instance
+## Starting (or restarting) a local Supabase instance
 
 Initiate the local docker network of supabase services from the newly created `supabase` directory within the project root:
 
@@ -35,6 +35,14 @@ From the same directory you can put the local supabase instance in sleep mode us
 
 ```bash
 npx supabase stop
+```
+
+## Reseting the local Supabase instance
+
+Starting with the accomponaying repository at Chapter 4, the `package.json` now contains a supabase reset script:
+
+```bash
+pnpm reset
 ```
 
 ## Post-Template Packages
