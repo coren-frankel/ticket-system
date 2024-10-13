@@ -9,9 +9,9 @@ export const Login = ({ isPasswordLogin }: { isPasswordLogin: boolean }) => {
   const supabase = getSupabaseBrowserClient();
   const router = useRouter();
   return (
-    <form action="/auth/pw-login" method="POST" onSubmit={(event) => {
-      event.preventDefault();
+    <form action={isPasswordLogin ? "/auth/pw-login" : "/auth/magic-link"} method="POST" onSubmit={(event) => {
       if (isPasswordLogin) {
+        event.preventDefault();
         supabase.auth.signInWithPassword({
           email: emailInputRef.current!.value,
           password: passwordInputRef.current!.value,
