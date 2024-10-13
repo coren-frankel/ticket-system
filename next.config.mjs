@@ -1,6 +1,14 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  redirects: async () => [
+    {
+    source: "/logout",
+    destination: "/auth/logout",
+    permanent: true
+    },
+  ],
+};
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
